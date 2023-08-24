@@ -45,6 +45,6 @@
   },
   "devDependencies": {
     "@flydotio/dockerfile": "^0.2.14",
-    "terser": "^3.14.1"
+    "terser": "^5.19.2"
   }
 }
