@@ -29,7 +29,7 @@ export async function POST(req: Request) {
 
   // Load the companion config
   const configManager = ConfigManager.getInstance();
-  const companionConfig = configManager.getConfig("name", companionName);
+  const companionConfig = configManager.getConfig("name", companionName!);
   if (!companionConfig) {
     return returnError(404, `Hi, we were unable to find the configuration for a companion named ${companionName}.`)
   }
