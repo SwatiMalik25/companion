@@ -13,7 +13,7 @@ const Header = () => {
                 height={0}
                 sizes="100vw"
                 className="hidden h-8 w-auto lg:block rounded-lg"
-                src="https://avatars.githubusercontent.com/u/745163?s=200&v=4"></img>
+                src="https://avatars.githubusercontent.com/u/745163?s=200&v=4"/>
       <span className="ml-3 text-xl">AI Companion</span>
     </a>
     <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">

@@ -8,7 +8,7 @@ const Content = () => {
       <div className="rounded-lg h-64 overflow-hidden">
         <img alt="content" className="object-cover object-center h-full w-full"
          style={{ width: 2000, height: 400 }}
-        src="https://a16z.com/wp-content/uploads/2023/06/Yoast-AiCompanions-LinkedIn-V2.jpg"></img>
+        src="https://a16z.com/wp-content/uploads/2023/06/Yoast-AiCompanions-LinkedIn-V2.jpg"/>
       </div>
       <div className="flex flex-col sm:flex-row mt-10">
         <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8">

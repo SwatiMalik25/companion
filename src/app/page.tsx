@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 
 import Examples from "@/components/Examples";
 
-import { Main } from "next/document";
+
 
 import Image from "next/image";
 

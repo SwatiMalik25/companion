@@ -10,7 +10,7 @@ const Footer = () => {
                 height={0}
                 sizes="100vw"
                 className="hidden h-8 w-auto lg:block rounded-lg"
-                src="https://avatars.githubusercontent.com/u/745163?s=200&v=4"></img>
+                src="https://avatars.githubusercontent.com/u/745163?s=200&v=4"/>
       <span className="ml-3 text-xl">AI Companion</span>
     </a>
     <p className="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">© Companion App —

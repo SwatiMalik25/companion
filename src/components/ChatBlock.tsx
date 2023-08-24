@@ -19,7 +19,7 @@ export function ChatBlock({text, mimeType, url} : {
                 <source src={url} type={mimeType} />
                 Download the <a href={url}>video</a>
             </video>
-        } else if (mimeType.startsWith("image")) {
+        } else if (mimeType.startsWith("Image")) {
             internalComponent = <img src={url} />
         }
     } else if (url) {
