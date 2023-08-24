@@ -5,6 +5,7 @@
  * 
  */
 //import Image from 'next/image'
+import React from 'react'
 export function ChatBlock({text, mimeType, url} : {
     text?: string,
     mimeType?: string,
@@ -21,7 +22,7 @@ export function ChatBlock({text, mimeType, url} : {
                 <source src={url} type={mimeType} />
                 Download the <a href={url}>video</a>
             </video>
-        } else if (mimeType.startsWith("Image")) {
+        } else if (mimeType.startsWith("image")) {
             internalComponent = <img src={url} alt='' />
         }
     } else if (url) {
@@ -43,7 +44,7 @@ export function ChatBlock({text, mimeType, url} : {
  */
 export function responseToChatBlocks(completion: any) {
     // First we try to parse completion as JSON in case we're dealing with an object.
-    console.log("got completoin", completion, typeof completion)
+    console.log("got completion", completion, typeof completion)
     if (typeof completion == "string") {
         try {
             completion = JSON.parse(completion)

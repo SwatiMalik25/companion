@@ -5,6 +5,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { useCompletion } from "ai/react";
 import {ChatBlock, responseToChatBlocks} from "@/components/ChatBlock";
 
+
 var last_name = "";
 
 export default function QAModal({
@@ -37,7 +38,7 @@ export default function QAModal({
     headers: { name: example.name },
   });
 
-  let [blocks, setBlocks] = useState<ChatBlock[] | null>(null)
+  const [blocks, setBlocks] = useState<any | null>(null);
 
   useEffect(() => {
     // When the completion changes, parse it to multimodal blocks for display.
