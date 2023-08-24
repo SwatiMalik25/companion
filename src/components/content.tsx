@@ -1,12 +1,12 @@
 import React from 'react'
-
+import Image from 'next/image'
 const Content = () => {
   return (
 <section className="text-gray-600 body-font">
   <div className="container px-5 py-24 mx-auto flex flex-col">
     <div className="lg:w-4/6 mx-auto">
       <div className="rounded-lg h-64 overflow-hidden">
-        <img alt="content" className="object-cover object-center h-full w-full"
+        <Image alt="content" className="object-cover object-center h-full w-full"
          style={{ width: 2000, height: 400 }}
         src="https://a16z.com/wp-content/uploads/2023/06/Yoast-AiCompanions-LinkedIn-V2.jpg"/>
       </div>

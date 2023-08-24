@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image';
 //import * as React from 'react'
 import Head from 'next/head';
 
@@ -8,12 +9,12 @@ const Header = () => {
     <header className="text-gray-600 body-font">
   <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-    <img
+    <Image
                 width={0}
                 height={0}
                 sizes="100vw"
                 className="hidden h-8 w-auto lg:block rounded-lg"
-                src="https://avatars.githubusercontent.com/u/745163?s=200&v=4"/>
+                src="https://avatars.githubusercontent.com/u/745163?s=200&v=4"alt=''/>
       <span className="ml-3 text-xl">AI Companion</span>
     </a>
     <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">

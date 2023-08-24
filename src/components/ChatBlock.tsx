@@ -2,7 +2,9 @@
  * Represents a unit of multimodal chat: text, video, audio, or image.
  *
  * For streaming responses, just update the `text` argument.
+ * 
  */
+import Image from 'next/image'
 export function ChatBlock({text, mimeType, url} : {
     text?: string,
     mimeType?: string,
@@ -20,7 +22,7 @@ export function ChatBlock({text, mimeType, url} : {
                 Download the <a href={url}>video</a>
             </video>
         } else if (mimeType.startsWith("Image")) {
-            internalComponent = <img src={url} />
+            internalComponent = <Image src={url} alt='' />
         }
     } else if (url) {
         internalComponent = <a href={url}>Link</a>

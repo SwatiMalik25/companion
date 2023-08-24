@@ -1,11 +1,12 @@
 import React from 'react'
+import Image from 'next/image'
 
 const HeroSection = () => {
   return (
     
     <section className="text-gray-600 body-font">
   <div className="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
-    <img className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" 
+    <Image className="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded" 
      style={{ width: 500, height: 700 }}
     alt="hero" src="https://is1-ssl.mzstatic.com/image/thumb/Purple123/v4/2d/35/9b/2d359b56-ea0e-7909-5a89-9998d8571566/pr_source.jpg/392x696bb.jpg"/>
     <div className="text-center lg:w-2/3 w-full">
