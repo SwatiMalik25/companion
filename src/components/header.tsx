@@ -1,12 +1,19 @@
-import React from 'react'
+"use client";
+import React from 'react';
 //import Image from 'next/image';
 //import * as React from 'react'
-import Head from 'next/head';
+import { useScrollPosition } from '@/hooks/useScrollPosition';
 
 
 const Header = () => {
+  const scrollPosition = useScrollPosition();
   return (
-    <header className="text-gray-600 body-font">
+    <header className={`sticky top-0 z-50 transition-shadow ${
+      scrollPosition>0 
+      ? "shadow bg-opacity-70 backdrop-blur-lg backdrop-filter"
+      :"shadow-none" 
+      }`}
+      >
   <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
     <img
@@ -17,11 +24,11 @@ const Header = () => {
                 src="https://avatars.githubusercontent.com/u/745163?s=200&v=4"alt=''/>
       <span className="ml-3 text-xl">AI Companion</span>
     </a>
-    <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-      <a className="mr-5 hover:text-gray-900">Get the App</a>
-      <a className="mr-5 hover:text-gray-900">Blog</a>
-      <a className="mr-5 hover:text-gray-900">Help</a>
-      <a className="mr-5 hover:text-gray-900">Login</a>
+    <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center  text-base justify-center">
+     <button><a className="mr-5 hover:text-gray-900 hover:bg-gray-200 rounded ">Get the App</a></button>
+     <button><a className="mr-5 hover:text-gray-900 hover:bg-gray-200 rounded">Blog</a></button>
+     <button><a className="mr-5 hover:text-gray-900, hover:bg-gray-200 rounded">Help</a></button>
+     <button><a className="mr-5 hover:text-gray-900, hover:bg-gray-200 rounded">Login</a></button>
     </nav>
     <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
       <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
