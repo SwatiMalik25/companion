@@ -18,7 +18,8 @@ export default async function Home() {
     return (
       <main >
         {!!user ? (
-             <><Header/>
+            <div> <Header/>
+           
              <p className="mx-auto mt-4 max-w-xl text-center text-xl leading-8 text-slate-400">
              Help you setup an AI companion project with ease. Here are some example characters:
          </p>
@@ -49,7 +50,8 @@ export default async function Home() {
                      
                      </radialGradient>
                  </defs>
-             </svg></>
+             </svg>
+             </div>
           
         ) : (
             <>
