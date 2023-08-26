@@ -1,13 +1,11 @@
 import "./styles/globals.css";
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
-import Header from "@/components/header";
-import Footer from "@/components/footer";
-import HeroSection from "@/components/hero-section";
-import Content from "@/components/content";
-import Feature from "@/components/feature";
-import Contact from "@/components/contact";
-import SignIn from "@/components/sighnin/sighnout";
+
+
+
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,26 +20,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={inter.className}>
-        
-         
-        <Header/>
-        <SignIn/>
-         {children}
-
-        <HeroSection/>
-
-      <Content/>
-
-      <Feature/>
-      <Contact/>
-        
-        <Footer/>
-      
-          </body>
-      </html>
-   </ClerkProvider>
+    <html lang="en">
+      <ClerkProvider>
+        <body>{children}</body>
+     
+      </ClerkProvider>
+    </html>
   );
 }

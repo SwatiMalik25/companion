@@ -1,12 +1,11 @@
-import { authMiddleware } from "@clerk/nextjs";
+import { withClerkMiddleware } from '@clerk/nextjs/server'
+import { NextResponse } from 'next/server'
 
-// This requires user to sign in to see any page or call any API route
+export default withClerkMiddleware(req => {
+  return NextResponse.next()
+})
 
-// TODO - the public route list should only contain /api/text for production
-export default authMiddleware({
-  publicRoutes: ["/api(.*)"],
-});
-
+// Stop Middleware running on static files
 export const config = {
-  matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
-};
+  matcher: '/((?!_next/image|_next/static|favicon.ico).*)'
+}

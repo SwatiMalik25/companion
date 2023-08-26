@@ -2,10 +2,14 @@
 import React from 'react';
 
 
+
+
+import { SignInButton, useUser, SignOutButton } from "@clerk/nextjs";
+
 import { useScrollPosition } from '@/hooks/useScrollPosition';
+export default function SignIn() {
+const user = useUser();
 
-
-const Header = () => {
   const scrollPosition = useScrollPosition();
   return (<>
     <header className={`sticky top-0 z-50 transition-shadow ${scrollPosition > 0
@@ -23,20 +27,25 @@ const Header = () => {
           <span className="ml-3 text-xl">AI Companion</span>
         </a>
      
-    
-    <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center  text-base justify-center  ">
+    <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center gp-20 text-base  ">
         <button><a className="mr-5 hover:text-gray-900 hover:bg-gray-200 rounded ">Get the App</a></button>
         <button><a className="mr-5 hover:text-gray-900 hover:bg-gray-200 rounded">Blog</a></button>
         <button><a className="mr-5 hover:text-gray-900, hover:bg-gray-200 rounded">Help</a></button>
-        
-      
+       
+        {!user.isSignedIn && <SignInButton mode="modal" />}
+      {!!user.isSignedIn && (
+        <>
+          <p>{user.user.username}</p>
+          <SignOutButton />
+        </>
 
-      </nav>
+      )}</nav>
+    
   </div>
   </header></>
   )
 }
 
-export default Header
+
 
 

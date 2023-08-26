@@ -1,5 +1,5 @@
-import { UserButton, auth } from "@clerk/nextjs";
-import { redirect } from "next/navigation";
+
+
 
 import Image from "next/image";
 
@@ -16,11 +16,9 @@ function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 export  const Navbar  = async () => {
-  const { userId } = auth();
 
-  if (!userId) {
-      redirect("/sign-in");
-  }{
+
+ {
 
   return (
     <div className="bg-gray-900 w-full fixed top-0 z-10">
