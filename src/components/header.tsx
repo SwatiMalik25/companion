@@ -2,42 +2,51 @@
 import React from 'react';
 //import Image from 'next/image';
 //import * as React from 'react'
+import Link from 'next/link'
+import { UserButton } from '@clerk/nextjs/app-beta/client';
+import { SignedIn, SignedOut } from '@clerk/nextjs/app-beta/client'
 import { useScrollPosition } from '@/hooks/useScrollPosition';
 
 
 const Header = () => {
   const scrollPosition = useScrollPosition();
-  return (
-    <header className={`sticky top-0 z-50 transition-shadow ${
-      scrollPosition>0 
-      ? "shadow bg-opacity-70 backdrop-blur-lg backdrop-filter"
-      :"shadow-none" 
-      }`}
-      >
-  <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-    <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-    <img
-                width={0}
-                height={0}
-                sizes="100vw"
-                className="hidden h-8 w-auto lg:block rounded-lg"
-                src="https://avatars.githubusercontent.com/u/745163?s=200&v=4"alt=''/>
-      <span className="ml-3 text-xl">AI Companion</span>
-    </a>
-    <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center  text-base justify-center">
-     <button><a className="mr-5 hover:text-gray-900 hover:bg-gray-200 rounded ">Get the App</a></button>
-     <button><a className="mr-5 hover:text-gray-900 hover:bg-gray-200 rounded">Blog</a></button>
-     <button><a className="mr-5 hover:text-gray-900, hover:bg-gray-200 rounded">Help</a></button>
-     <button><a className="mr-5 hover:text-gray-900, hover:bg-gray-200 rounded">Login</a></button>
-    </nav>
-    <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
-      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 ml-1" viewBox="0 0 24 24">
-        <path d="M5 12h14M12 5l7 7-7 7"></path>
-      </svg>
-    </button>
+  return (<>
+    <header className={`sticky top-0 z-50 transition-shadow ${scrollPosition > 0
+        ? "shadow bg-opacity-70 backdrop-blur-lg backdrop-filter"
+        : "shadow-none"}`}
+    >
+      < div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+        <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+          <img
+            width={0}
+            height={0}
+            sizes="100vw"
+            className="hidden h-8 w-auto lg:block rounded-lg"
+            src="https://avatars.githubusercontent.com/u/745163?s=200&v=4" alt='' />
+          <span className="ml-3 text-xl">AI Companion</span>
+        </a>
+     
+    
+    <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center  text-base justify-center  ">
+        <button><a className="mr-5 hover:text-gray-900 hover:bg-gray-200 rounded ">Get the App</a></button>
+        <button><a className="mr-5 hover:text-gray-900 hover:bg-gray-200 rounded">Blog</a></button>
+        <button><a className="mr-5 hover:text-gray-900, hover:bg-gray-200 rounded">Help</a></button>
+        <button><div className="mr-5 hover:text-gray-900, hover:bg-gray-200 rounded">
+      
+        <SignedOut>
+          <Link href="/sign-in">Login</Link>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+      
+      </div></button>
+      </nav>
   </div>
-</header>
+  </header></>
   )
 }
 
 export default Header
+
+
