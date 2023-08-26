@@ -6,7 +6,7 @@ class ConfigManager {
   private config: any;
 
   private constructor() {
-    const data = fs.readFileSync("companions/companions.json", "utf8");
+    const data = fs.readFileSync("./companions/companions.json", "utf8");
     this.config = JSON.parse(data);
   }
 
