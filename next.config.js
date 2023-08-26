@@ -3,7 +3,7 @@ const nextConfig = {
   
     experimental: {
       appDir: true,
-      output: 'standalone',
+      nftTracing: true ,
     serverActions: true,
     swcMinify:false,
   },
