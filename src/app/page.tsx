@@ -21,7 +21,10 @@ export default async function Home() {
              <><Header/>
              <p className="mx-auto mt-4 max-w-xl text-center text-xl leading-8 text-slate-400">
              Help you setup an AI companion project with ease. Here are some example characters:
-         </p><Examples /><svg
+         </p>
+         <Examples />
+         
+         <svg
              viewBox="0 0 1024 1024"
              className="absolute left-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2"
              aria-hidden="true"
@@ -43,6 +46,7 @@ export default async function Home() {
                      >
                          <stop stopColor="rgb(17 24 39)" />
                          <stop offset={1} stopColor="rgb(125 211 252)" stopOpacity={0} />
+                     
                      </radialGradient>
                  </defs>
              </svg></>
