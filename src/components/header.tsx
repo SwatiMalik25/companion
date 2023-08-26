@@ -1,10 +1,7 @@
 "use client";
 import React from 'react';
-//import Image from 'next/image';
-//import * as React from 'react'
-import Link from 'next/link'
-import { UserButton } from '@clerk/nextjs/app-beta/client';
-import { SignedIn, SignedOut } from '@clerk/nextjs/app-beta/client'
+
+
 import { useScrollPosition } from '@/hooks/useScrollPosition';
 
 
@@ -31,16 +28,9 @@ const Header = () => {
         <button><a className="mr-5 hover:text-gray-900 hover:bg-gray-200 rounded ">Get the App</a></button>
         <button><a className="mr-5 hover:text-gray-900 hover:bg-gray-200 rounded">Blog</a></button>
         <button><a className="mr-5 hover:text-gray-900, hover:bg-gray-200 rounded">Help</a></button>
-        <button><div className="mr-5 hover:text-gray-900, hover:bg-gray-200 rounded">
+        
       
-        <SignedOut>
-          <Link href="/sign-in">Login</Link>
-        </SignedOut>
-        <SignedIn>
-          <UserButton />
-        </SignedIn>
-      
-      </div></button>
+
       </nav>
   </div>
   </header></>

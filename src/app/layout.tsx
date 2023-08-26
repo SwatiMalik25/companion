@@ -7,6 +7,7 @@ import HeroSection from "@/components/hero-section";
 import Content from "@/components/content";
 import Feature from "@/components/feature";
 import Contact from "@/components/contact";
+import SignIn from "@/components/sighnin/sighnout";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +28,9 @@ export default function RootLayout({
         
          
         <Header/>
+        <SignIn/>
          {children}
+
         <HeroSection/>
 
       <Content/>

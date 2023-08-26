@@ -62,26 +62,15 @@ export  const Navbar  = async () => {
                     {item.name}
                   </a>
                 ))}
-                <div className="mx-6" />
-                <div className="ml-auto flex items-center space-x-4">
-                    <UserButton afterSignOutUrl="/" />
-                </div>
-                <div className="px-3 py-2 text-gray-300">
-                  <iframe
-                    src="https://ghbtns.com/github-btn.html?user=a16z-infra&repo=companion-app&type=star&count=true"
-                    frameBorder="0"
-                    scrolling="0"
-                    width="150"
-                    height="20"
-                    title="GitHub"
-                  ></iframe>
+               
+                  
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    
   );
 }
 }
