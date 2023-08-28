@@ -2,7 +2,7 @@
 
 
 export async function getCompanions() {
-  const id = "./src/companions.json";
+  const id = "./public/companions.json";
 
   // console.log("Loading companion descriptions from "+COMPFILE);
   var fs = require('fs');
@@ -13,3 +13,4 @@ export async function getCompanions() {
   var js = JSON.parse(String(data));
   return String(data);
 }
+export default getCompanions;
