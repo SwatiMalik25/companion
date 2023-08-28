@@ -3,7 +3,7 @@
 
 export async function getCompanions() {
   const id = "./companions/companions.json";
-  var companions = [];
+
   // console.log("Loading companion descriptions from "+COMPFILE);
   var fs = require('fs');
   const data = fs.readFileSync(id);
