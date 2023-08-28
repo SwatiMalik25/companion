@@ -1,6 +1,6 @@
 
 import Examples from "@/components/Examples";
-import Navbar from "@/components/Navbar";
+
 
 import Footer from "@/components/footer";
 import HeroSection from "@/components/hero-section";
@@ -20,7 +20,7 @@ export default async function Home() {
       <main >
         {!!user ? (
             <div> <Header/>
-                   <Navbar />
+                 
            
              <p className="mx-auto mt-4 max-w-xl text-center text-xl leading-8 text-slate-400">
              Help you setup an AI companion project with ease. Here are some example characters:
