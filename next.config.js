@@ -2,7 +2,9 @@
 const nextConfig = {
   
     experimental: {
+   
       output: 'export',
+     
    
     serverActions: true,
     swcMinify:false,
@@ -37,4 +39,6 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = {
+  trailingSlash: true,
+}
