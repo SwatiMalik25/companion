@@ -5,7 +5,7 @@ const nextConfig = {
     serverActions: true,
 
   },
-  output: 'export',
+  trailingSlash: true,
   images: {
     remotePatterns: [
       {
