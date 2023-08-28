@@ -2,6 +2,7 @@
 const nextConfig = {
   experimental: {
     serverActions: true,
+    output: 'export',
   },
   images: {
     remotePatterns: [
