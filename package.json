@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "export": "next export",
     "generate-embeddings-pinecone": "node src/scripts/indexPinecone.mjs",
     "generate-embeddings-supabase": "node src/scripts/indexPGVector.mjs",
     "export-to-character": "node src/scripts/exportToCharacter.mjs"
