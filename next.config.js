@@ -1,14 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 
-  
-  reactStrictMode: true,
   experimental: {
-    concurrentFeatures: false, // <- Turn this option to false
-    serverComponents: true,
-  },
+    serverActions: true,
 
-  trailingSlash: true,
+  },
+ 
   images: {
     remotePatterns: [
       {
@@ -39,4 +36,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = nextConfig
