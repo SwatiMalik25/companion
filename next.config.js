@@ -2,11 +2,13 @@
 const nextConfig = {
   
     experimental: {
-      trailingSlash: true,
       output: 'export',
+      serverActions: true,
+      trailingSlash: true,
+      
      
    
-    serverActions: true,
+ 
     swcMinify:false,
   },
   images: {
