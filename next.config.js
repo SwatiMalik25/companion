@@ -2,7 +2,7 @@
 const nextConfig = {
   
     experimental: {
-   
+      trailingSlash: true,
       output: 'export',
      
    
@@ -39,6 +39,4 @@ const nextConfig = {
   },
 };
 
-module.exports = {
-  trailingSlash: true,
-}
+module.exports = {}
