@@ -6,6 +6,7 @@ const nextConfig = {
 
   },
   
+  output: "export",
   images: {
     remotePatterns: [
       {
