@@ -4,10 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
+    "preexport": "npm run build",
+    "export": "next export",
+    "prestart": "npm run export",
     "start": "next start",
     "lint": "next lint",
-    "next:export": "next export",
+     
     "generate-embeddings-pinecone": "node src/scripts/indexPinecone.mjs",
     "generate-embeddings-supabase": "node src/scripts/indexPGVector.mjs",
     "export-to-character": "node src/scripts/exportToCharacter.mjs"
