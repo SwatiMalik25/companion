@@ -2,9 +2,10 @@
 const nextConfig = {
   
     experimental: {
-      output: 'export',
+    
       serverActions: true,
       trailingSlash: true,
+      output: 'export',
       
      
    
