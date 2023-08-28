@@ -2,9 +2,11 @@
 const nextConfig = {
 
   
-    serverActions: true,
-    output: 'export',
-
+  reactStrictMode: true,
+  experimental: {
+    concurrentFeatures: false, // <- Turn this option to false
+    serverComponents: true,
+  },
 
   trailingSlash: true,
   images: {
