@@ -3,6 +3,13 @@
       "api/test.php": {
         "includeFiles": "templates/**",
         "runtime": "vercel-php@0.5.2"
-    }
+    },
+    "github": {
+      "enabled": false
+    },
+
+    "builds": [
+      { "src": "{{Source for distribution}}", "use": "@vercel/static" }
+    ]
   }
 }

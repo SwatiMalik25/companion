@@ -5,8 +5,6 @@ const nextConfig = {
     serverActions: true,
 
   },
-  distDir:".next/static/",
-  output: "export",
   images: {
     remotePatterns: [
       {
