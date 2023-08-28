@@ -2,6 +2,7 @@
 const nextConfig = {
   
     experimental: {
+      output: 'export',
       appDir: true,
       nftTracing: true ,
     serverActions: true,
