@@ -1,16 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  
-    experimental: {
-    
-      serverActions: true,
-  
-      output: 'export',
-      
-     
-   
- 
-    swcMinify:false,
+  experimental: {
+    serverActions: true,
   },
   images: {
     remotePatterns: [
@@ -42,11 +33,4 @@ const nextConfig = {
   },
 };
 
-module.exports = {
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.fallback.fs = false;
-    }
-    return config;
-  },
-}
+module.exports = nextConfig;
