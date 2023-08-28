@@ -5,7 +5,7 @@ const nextConfig = {
     serverActions: true,
 
   },
-  
+  output: 'export',
   images: {
     remotePatterns: [
       {
